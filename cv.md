@@ -34,3 +34,7 @@ Geologist
 * lowpoly paper sculptures
 * jewelry design
 * photography
+****
+## Languages
+* Russian *Native*
+* English *Intermediate*
