@@ -1,5 +1,6 @@
 # Ekaterina Kovaleva
 ******
+![photo](/photo240x254.JPG "photo")
 ******
 ## Contacts
 * Phone: +995591265675
