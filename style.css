@@ -20,14 +20,6 @@ main {
     text-align: left;
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 3px;
-    background-color: #5E503F;
-}
-
 .title {
     padding: 30px;
     color:#C7CB85;
@@ -52,6 +44,14 @@ h2 {
 
 p {
     padding-left: 30px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3px;
+    background-color: #5E503F;
 }
 
 footer a {
