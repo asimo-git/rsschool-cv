@@ -203,6 +203,7 @@ a {
     letter-spacing: 1px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -342,7 +343,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 4px;
     flex-wrap: wrap;
     width: 100%;
     list-style: none;
@@ -355,7 +355,7 @@ a {
     justify-content: center;
     gap: 7px;
     min-height: 38px;
-    padding: 5px 13px;
+    padding: 5px 10px;
     color: rgb(var(--text-main-rgb));
     font-family: var(--font-accent);
     font-size: 1.05rem;
@@ -723,4 +723,120 @@ a {
 
 .rs-logo::after {
     display: none;
+}
+
+/* --- RESPONSIVE --- */
+/*-------------------*/
+
+@media (max-width: 992px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .header-section {
+        grid-template-columns: auto 1fr;
+    }
+
+    .header-section> :nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    .contact-grid {
+        max-width: 100%;
+
+        & ul {
+            justify-content: center;
+            gap: 5px;
+        }
+    }
+
+    .nav-item {
+        flex-direction: column;
+        gap: 0;
+        font-size: 0.9rem;
+        padding: 4px 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cv-wrapper {
+        padding: 0 10px;
+    }
+
+    .cv-container {
+        padding: 20px 15px;
+    }
+
+    .hero-name {
+        font-size: 1.9rem;
+    }
+
+    .hero-title {
+        font-size: 1.1rem;
+    }
+
+    .nav-item {
+        font-size: 1.2rem;
+
+        & :last-child {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header-section {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .cv-wrapper {
+        padding: 10px 8px;
+        margin: 0 auto;
+    }
+
+    .cv-container {
+        padding: 16px 8px;
+        border-radius: 8px;
+    }
+
+    .hero-name {
+        font-size: 1.5rem;
+    }
+
+    .hero-title {
+        justify-content: center;
+    }
+
+    .hero-motto {
+        font-size: 0.95rem;
+    }
+
+    .contact-item {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+
+    .sidebar-card,
+    .content-section {
+        padding: 16px;
+        margin-bottom: 15px;
+    }
+
+    .role-title {
+        font-size: 1.1rem;
+    }
+
+    .code-window-body {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .footer-section {
+        margin-top: 0;
+        padding-top: 10px;
+        font-size: 0.75rem;
+    }
 }
