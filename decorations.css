@@ -43,8 +43,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -45%);
-    width: min(500px, calc(100vw - 40px));
-    padding: 10%;
+    width: min(500px, calc(100vw - 60px));
+    padding: 50px;
     background-color: rgb(var(--bg-primary-rgb));
 
     --gold-stop: rgba(var(--accent-gold-rgb), 0.5) 0%, transparent 20%, transparent 80%, rgba(var(--accent-gold-rgb), 0.5) 100%;
@@ -238,6 +238,7 @@ section:target h2::after {
 
 .ring-banner {
     padding: 0 15px;
+    overflow-x: clip;
 }
 
 .ring-banner-track {
@@ -297,4 +298,46 @@ section:target h2::after {
             transform: translateX(-50%);
         }
     }
+}
+
+/* --- ICONS --- */
+
+.icon--scroll {
+    -webkit-mask-image: url("./images/icons/scroll.svg");
+    mask-image: url("./images/icons/scroll.svg");
+}
+
+.icon--wrench {
+    -webkit-mask-image: url("./images/icons/wrench.svg");
+    mask-image: url("./images/icons/wrench.svg");
+}
+
+.icon--briefcase {
+    -webkit-mask-image: url("./images/icons/briefcase.svg");
+    mask-image: url("./images/icons/briefcase.svg");
+}
+
+.icon--languages {
+    -webkit-mask-image: url("./images/icons/languages.svg");
+    mask-image: url("./images/icons/languages.svg");
+}
+
+.icon--gem {
+    -webkit-mask-image: url("./images/icons/gem.svg");
+    mask-image: url("./images/icons/gem.svg");
+}
+
+.icon--education {
+    -webkit-mask-image: url("./images/icons/education.svg");
+    mask-image: url("./images/icons/education.svg");
+}
+
+.icon--terminal {
+    -webkit-mask-image: url("./images/icons/terminal.svg");
+    mask-image: url("./images/icons/terminal.svg");
+}
+
+.icon--soft-skills {
+    -webkit-mask-image: url("./images/icons/soft.svg");
+    mask-image: url("./images/icons/soft.svg");
 }
