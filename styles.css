@@ -139,30 +139,6 @@ a {
     max-width: 1240px;
     margin: 0 auto 20px;
     padding: 0 20px;
-
-    &::before,
-    &::after {
-        content: "";
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 120px;
-        opacity: 0.1;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    &::before {
-        left: 0;
-        background-image: url("/images/left.png");
-        background-position: left bottom;
-    }
-
-    &::after {
-        right: 0;
-        background-image: url("/images/right.png");
-        background-position: right bottom;
-    }
 }
 
 .cv-container {
@@ -498,7 +474,7 @@ a {
 .card-title {
     font-family: var(--font-heading);
     font-size: 1.15rem;
-    letter-spacing: 5%;
+    letter-spacing: 0.05em;
     color: rgb(var(--text-title-rgb));
     margin-bottom: 8px;
     display: flex;
@@ -720,7 +696,7 @@ a {
     color: rgb(var(--accent-gold-rgb));
     background: rgba(var(--accent-gold-rgb), 0.1);
     padding: 2px 8px;
-    border-radius: 8cqi;
+    border-radius: 8px;
 }
 
 /* --- FOOTER --- */
@@ -738,6 +714,13 @@ a {
     align-items: center;
     gap: 12px;
     font-size: 0.85rem;
+    color: rgb(var(--accent-gold-rgb));
+}
+
+.secret-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
     color: rgb(var(--accent-gold-rgb));
 }
 
@@ -790,11 +773,6 @@ a {
 @media (max-width: 700px) {
     .cv-wrapper {
         padding: 0 10px;
-
-        &::before,
-        &::after {
-            width: 60px;
-        }
     }
 
     .cv-container {
@@ -870,147 +848,5 @@ a {
         margin-top: 0;
         padding-top: 10px;
         font-size: 0.75rem;
-    }
-}
-
-/* --- RING BANNER --- */
-
-.ring-banner {
-    padding: 0 15px;
-}
-
-.ring-banner-track {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.sauron-ring-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    animation: ringGlow 3s ease-in-out infinite;
-}
-
-.sauron-ring-image--clone {
-    display: none;
-}
-
-@keyframes ringGlow {
-
-    0%,
-    100% {
-        filter:
-            drop-shadow(0 0 4px rgba(var(--ring-orange-rgb), 0.55)) drop-shadow(0 0 12px rgba(var(--ring-amber-rgb), 0.25)) drop-shadow(0 6px 18px rgba(var(--ring-yellow-rgb), 0.12));
-    }
-
-    50% {
-        filter:
-            drop-shadow(0 0 10px var(--ring-glow-mid-1)) drop-shadow(0 0 22px var(--ring-glow-mid-2)) drop-shadow(0 4px 35px rgba(var(--ring-yellow-rgb), 0.25)) drop-shadow(0 10px 55px rgba(var(--ring-yellow-rgb), 0.08));
-    }
-}
-
-@media (max-width: 992px) {
-    .ring-banner-track {
-        width: max-content;
-        animation: ringMarquee 25s linear infinite;
-    }
-
-    .sauron-ring-image {
-        max-width: none;
-        height: 40px;
-        width: auto;
-        flex-shrink: 0;
-    }
-
-    .sauron-ring-image--clone {
-        display: block;
-    }
-
-    @keyframes ringMarquee {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            transform: translateX(-50%);
-        }
-    }
-}
-
-/* --- ANIMATIONS --- */
-
-section:target h2 {
-    position: relative;
-}
-
-section:target h2::before,
-section:target h2::after {
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    inset: -12px -18px;
-    filter: blur(6px);
-    opacity: 0;
-    animation: frame 2s ease-out forwards;
-}
-
-section:target h2::before {
-    border-top: 3px solid rgb(var(--accent-gold-bright-rgb));
-    border-bottom: 3px solid rgb(var(--accent-gold-rgb));
-    transform: scaleX(0);
-    animation-name: frame-h;
-}
-
-section:target h2::after {
-    border-left: 3px solid rgb(var(--accent-gold-bright-rgb));
-    border-right: 3px solid rgb(var(--accent-gold-rgb));
-    transform: scaleY(0);
-    animation-name: frame-v;
-}
-
-@keyframes frame-h {
-    0% {
-        transform: scaleX(0);
-        opacity: 0;
-    }
-
-    15% {
-        opacity: 1;
-    }
-
-    45%,
-    75% {
-        transform: scaleX(1);
-        opacity: 1;
-        box-shadow: 0 0 12px rgba(var(--accent-gold-rgb), 0.9);
-    }
-
-    100% {
-        transform: scaleX(1);
-        opacity: 0;
-    }
-}
-
-@keyframes frame-v {
-    0% {
-        transform: scaleY(0);
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    55%,
-    75% {
-        transform: scaleY(1);
-        opacity: 1;
-        box-shadow: 0 0 12px rgba(var(--accent-gold-rgb), 0.9);
-    }
-
-    100% {
-        transform: scaleY(1);
-        opacity: 0;
     }
 }

@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="decorations.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github-dark.min.css">
     </head>
     <body>
@@ -581,16 +582,35 @@ function cache(func) {
                     <a href="https://github.com/asimo-git" target="_blank" class="github-link">
                         github.com/asimo-git
                     </a>
-                    <div>© 2026</div>
+                    <div>
+                        <button class="secret-button" onclick="showMessage()">&#x1F4DC;&#xFE0E;</button>
+                        2026
+                    </div>
                     <a href="https://rs.school/courses/short-track" target="_blank" class="rs-logo">
                         <img src="images/rs-school-logo.svg" alt="RS School Logo">
                     </a>
                 </footer>
+                <!-- Hidden Message -->
+                <div id="message" class="hidden-message">
+                    <p>
+                        <strong>Congratulations! You’ve uncovered the secret scroll!</strong>
+                        Elven magic blesses your code - may every commit be bug‑free and every layout pixel‑perfect. Front‑end fortune is now on your side!
+                    </p>
+                    <div class="wizard"></div>
+                </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
         <script>
     hljs.highlightAll();
+        </script>
+        <script>
+function showMessage() {
+    const message = document.getElementById('message');
+    message.classList.remove('show');
+    void message.offsetWidth;
+    message.classList.add('show');
+}
         </script>
     </body>
 </html>
