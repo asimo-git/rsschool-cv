@@ -14,13 +14,13 @@
 
     &::before {
         left: 0;
-        background-image: url("/images/left.png");
+        background-image: url("./images/left.png");
         background-position: left bottom;
     }
 
     &::after {
         right: 0;
-        background-image: url("/images/right.png");
+        background-image: url("./images/right.png");
         background-position: right bottom;
     }
 }
@@ -125,7 +125,7 @@
     width: 60px;
     height: 60px;
     margin: 0 auto;
-    background-image: url("/images/wizard.svg");
+    background-image: url("./images/wizard.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
