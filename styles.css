@@ -507,10 +507,6 @@ a {
 
 /* --- About --- */
 
-.bio-list {
-    list-style-position: inside;
-}
-
 .bio-paragraph strong {
     color: rgb(var(--accent-gold-bright-rgb));
     font-weight: 600;
